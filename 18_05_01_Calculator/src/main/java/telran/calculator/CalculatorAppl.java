@@ -21,6 +21,10 @@ public class CalculatorAppl {
 	Set<String> getOperations(){
 	return calculator.getOperations();
 }
+@RequestMapping(value="/")
+int getStarted() {
+	return param;
+}
 
 @PostMapping(value="calculate")
 int getResult(@RequestBody CalculateData data){
