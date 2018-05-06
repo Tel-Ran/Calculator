@@ -1,5 +1,6 @@
 package telran.calculator;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +14,8 @@ import java.util.*;
 @SpringBootApplication
 @RestController
 public class CalculatorAppl {
+	@Value("${param}")
+	int param;
 	Calculator calculator=new Calculator();
 @RequestMapping(value="operations")
 	Set<String> getOperations(){
